@@ -25,14 +25,14 @@ export const PROJECTS: Project[] = [
     title: "Al Khor Warehouses",
     category: "Industrial MEP",
     location: "Al Khor, Qatar",
-    image: 'public/wearhouses-project.jpeg'
+    image: 'wearhouses-project.jpeg'
     // image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
   },
   {
     title: "Al Messila Apartments",
     category: "Residential HVAC & Plumbing",
     location: "Messila, Doha",
-    image: 'public/massila-apartments.png'
+    image: 'massila-apartments.png'
     // image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800"
   },
   {
@@ -46,20 +46,20 @@ export const PROJECTS: Project[] = [
     title: "Lusail Fox Hills",
     category: "Residential & Commercial",
     location: "Lusail City",
-    image: "public/foxhills.jpeg"
+    image: "foxhills.jpeg"
   },
   {
     title: "Um Salal Palace",
     category: "Luxury Residential",
     location: "Umm Salal",
-    image: "public/umm-salal-palace.jpeg"
+    image: "umm-salal-palace.jpeg"
     // image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800"
   },
   {
     title: "Barzan Tower Renovation",
     category: "Restoration & MEP",
     location: "Doha",
-    image: "public/barzan-tower.jpeg"
+    image: "barzan-tower.jpeg"
     // image: "https://images.unsplash.com/photo-1533395427226-7881e43666e6?auto=format&fit=crop&q=80&w=800"
   }
 ];
