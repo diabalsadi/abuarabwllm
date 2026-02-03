@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4 rtl:space-x-reverse mt-8">
               <a href="https://www.linkedin.com/company/abuac-w-l-l/posts/?feedView=all" className="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center hover:bg-cyan-600 transition-colors"><Linkedin size={18} /></a>
               <a href="#" className="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center hover:bg-cyan-600 transition-colors"><Facebook size={18} /></a>
-              <a href="https://wa.me/97455052843" className="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center hover:bg-cyan-600 transition-colors"><img src="public/whatsappIcon.svg" /></a> {/** TODO: Instead of Twitter use WhatsApp*/}
+              <a href="https://wa.me/97455052843" className="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center hover:bg-cyan-600 transition-colors"><img src="whatsappIcon.svg" /></a> {/** TODO: Instead of Twitter use WhatsApp*/}
               <a href="#" className="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center hover:bg-cyan-600 transition-colors"><Instagram size={18} /></a>
             </div>
           </div>
