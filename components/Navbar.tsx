@@ -50,10 +50,11 @@ const Navbar: React.FC = () => {
             onClick={(e) => scrollToSection(e, '#home')} 
             className="flex-shrink-0 flex items-center group relative z-[101]"
           >
-            <span className={`text-2xl md:text-3xl font-black tracking-tighter transition-colors duration-300 ${isSolid ? 'text-blue-900' : 'text-white'}`}>
-              ABU<span className="text-amber-500">AC</span>
+            {/* Rebranded Logo: Navy ABU + Cyan AC */}
+            <span className={`text-2xl md:text-3xl font-black tracking-tighter transition-colors duration-300 ${isSolid ? 'text-blue-950' : 'text-white'}`}>
+              ABU<span className="text-cyan-500">AC W.L.L</span>
             </span>
-            <span className={`ms-3 text-[10px] font-bold uppercase tracking-[0.2em] hidden lg:block transition-colors duration-300 ${isSolid ? 'text-gray-500' : 'text-gray-300 opacity-70'}`}>
+            <span className={`ms-3 text-[10px] font-bold uppercase tracking-[0.2em] hidden lg:block transition-colors duration-300 ${isSolid ? 'text-slate-500' : 'text-slate-300 opacity-90'}`}>
               {t('nav.companySub')}
             </span>
           </a>
@@ -65,12 +66,12 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className={`text-sm font-bold uppercase tracking-widest transition-all hover:text-amber-500 relative group py-2 ${
+                className={`text-sm font-bold uppercase tracking-widest transition-all hover:text-cyan-500 relative group py-2 ${
                   isSolid ? 'text-slate-700' : 'text-white'
                 }`}
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
             
@@ -80,7 +81,7 @@ const Navbar: React.FC = () => {
               onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
               className={`flex items-center text-xs font-black border-2 rounded-lg px-4 py-1.5 transition-all uppercase tracking-tighter ${
                 isSolid 
-                  ? 'border-blue-900/10 text-blue-900 hover:bg-blue-50' 
+                  ? 'border-blue-950/10 text-blue-950 hover:bg-blue-50' 
                   : 'border-white/20 text-white hover:bg-white/10'
               }`}
             >
@@ -91,7 +92,7 @@ const Navbar: React.FC = () => {
             <a
               href="#contact"
               onClick={(e) => scrollToSection(e, '#contact')}
-              className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2.5 rounded-lg text-xs font-black uppercase tracking-widest shadow-xl transition-all hover:-translate-y-0.5 active:translate-y-0 flex items-center"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2.5 rounded-lg text-xs font-black uppercase tracking-widest shadow-xl transition-all hover:-translate-y-0.5 active:translate-y-0 flex items-center"
             >
               <Phone className="w-3.5 h-3.5 me-2" />
               {t('nav.contactBtn')}
@@ -102,13 +103,13 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center space-x-3 rtl:space-x-reverse relative z-[101]">
              <button
               onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
-              className={`${isSolid ? 'text-blue-900 border-blue-900/20' : 'text-white border-white/30'} text-xs font-black border-2 rounded-lg px-2.5 py-1 uppercase`}
+              className={`${isSolid ? 'text-blue-950 border-blue-950/20' : 'text-white border-white/30'} text-xs font-black border-2 rounded-lg px-2.5 py-1 uppercase`}
             >
               {language === 'en' ? 'ع' : 'EN'}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-lg transition-colors ${isSolid ? 'text-blue-900 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
+              className={`p-2 rounded-lg transition-colors ${isSolid ? 'text-blue-950 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
               aria-label="Toggle Menu"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -118,7 +119,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Nav Overlay */}
-      <div className={`fixed inset-0 bg-white z-[90] transition-all duration-300 ease-in-out md:hidden flex flex-col pt-24 px-6 ${
+      <div className={`fixed inset-0 bg-white z-[90] transition-all duration-300 ease-in-out md:hidden flex flex-col pt-20 px-6 ${
         isOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none -translate-y-4'
       }`}>
         <div className="flex flex-col h-full overflow-y-auto pb-6">
@@ -126,18 +127,18 @@ const Navbar: React.FC = () => {
             <a
               key={link.name}
               href={link.href}
-              className="py-5 text-lg font-black text-slate-900 border-b border-gray-100 flex justify-between items-center active:bg-gray-50 transition-colors"
+              className="py-4 text-lg font-black text-slate-900 border-b border-gray-100 flex justify-between items-center active:bg-gray-50 transition-colors"
               onClick={(e) => scrollToSection(e, link.href)}
             >
               {link.name}
-              <ChevronRight className={`text-amber-500 ${language === 'ar' ? 'rotate-180' : ''}`} size={20} />
+              <ChevronRight className={`text-cyan-500 ${language === 'ar' ? 'rotate-180' : ''}`} size={20} />
             </a>
           ))}
-          <div className="mt-8">
+          <div className="mt-6">
              <a
               href="#contact"
               onClick={(e) => scrollToSection(e, '#contact')}
-              className="w-full bg-blue-900 text-white p-5 rounded-xl text-lg font-black flex items-center justify-center shadow-lg active:scale-95 transition-transform"
+              className="w-full bg-blue-950 text-white p-4 rounded-xl text-lg font-black flex items-center justify-center shadow-lg active:scale-95 transition-transform"
             >
               <Phone className="me-3" size={20} />
               {t('nav.contactBtn')}
