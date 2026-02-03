@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
         <div 
           className="absolute inset-0 bg-kenburns"
           style={{
-            backgroundImage: 'linear-gradient(to bottom, rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.85)), url("/public/heroImage.png")',
+            backgroundImage: 'linear-gradient(to bottom, rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.85)), url("/heroImage.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
