@@ -3,6 +3,7 @@ import React from 'react';
 import { MapPin, ArrowUpRight } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { PROJECTS } from '../constants';
+import { Link } from 'react-router-dom';
 
 const Projects: React.FC = () => {
   const { t } = useLanguage();
@@ -23,9 +24,11 @@ const Projects: React.FC = () => {
               {t('projects.subtitle')}
             </p>
           </div>
+          <Link to="/our-projects">
           <button className="bg-blue-950 text-white px-8 py-3 md:px-10 md:py-5 rounded-sm font-bold text-sm uppercase tracking-widest hover:bg-cyan-600 transition-all shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-1 whitespace-nowrap">
             {t('projects.viewAll')}
           </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">

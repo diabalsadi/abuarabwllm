@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { 
-  Zap, 
-  Droplets, 
-  Wind, 
-  ShieldCheck, 
-  Cpu, 
-  Settings 
+import {
+  Zap,
+  Droplets,
+  Wind,
+  ShieldCheck,
+  Cpu,
+  Settings
 } from 'lucide-react';
 import { Client, Project } from './types';
 
@@ -88,7 +88,7 @@ export const TRANSLATIONS = {
       tag: 'Your Trusted Partner for Integrated MEP Solutions.',
       title1: 'ABU ARAB',
       title2: 'CONTRACTING W.L.L',
-      subtitle: 'Engineered solutions for Qatar\'s vision. Specializing in high-performance MEP systems for residential, commercial, and industrial sectors.',      servicesBtn: 'OUR SERVICES',
+      subtitle: 'Engineered solutions for Qatar\'s vision. Specializing in high-performance MEP systems for residential, commercial, and industrial sectors.', servicesBtn: 'OUR SERVICES',
       projectsBtn: 'OUR PROJECTS'
     },
     clients: {
@@ -103,9 +103,9 @@ export const TRANSLATIONS = {
       qualityDesc: 'We ensure excellence through rigorous inspections, testing, and commissioning in strict compliance with Qatar’s engineering standards. Our commitment to quality guarantees safe, precise, and reliable MEP solutions designed for long-term durability and operational efficiency.',
       expertTitle: 'Local Expertise',
       expertDesc: 'Deep roots in the Qatar market, collaborating with top contractors to deliver complex projects across Doha and beyond.'
- },
+    },
     services: {
-     title: 'Our Core Expertise',
+      title: 'Our Core Expertise',
       subtitle: 'Comprehensive electro-mechanical services tailored for the unique technical requirements of Qatar\'s climate and infrastructure.',
       items: [
         { id: "electrical", title: "Electrical Systems", description: "Full-scale power distribution, LV/MV panels, lighting systems, and earthing solutions compliant with KAHRAMAA standards." },
@@ -160,6 +160,14 @@ export const TRANSLATIONS = {
       header: 'ABUAC Assistant',
       sub: 'MEP Specialist',
       powered: 'Powered by Gemini AI'
+    },
+    careers: {
+      hero: {
+        tag: 'Build Your Future With ABUAC.',
+        title1: 'Careers At',
+        title2: 'Abu Arab',
+        subtitle: 'Join a team delivering high-impact MEP projects across Qatar. Explore opportunities in engineering, project delivery, and field operations. Send your CV to hr@abuac.com'
+      }
     }
   },
   ar: {
@@ -172,7 +180,7 @@ export const TRANSLATIONS = {
       contactBtn: 'اتصل بنا',
       companySub: 'أعمال الميكانيكا والكهرباء'
     },
-     hero: {
+    hero: {
       tag: 'خياركم الموثوق للحلول الكهروميكانيكية المتكاملة',
       title1: 'شركة أبو عرب',
       title2: 'للمقاولات',
@@ -192,7 +200,7 @@ export const TRANSLATIONS = {
       qualityDesc: 'نحن نضمن التميز من خلال عمليات التفتيش والاختبار والتشغيل الصارمة، مع الالتزام التام بالمعايير الهندسية في دولة قطر. يضمن التزامنا بالجودة حلولاً كهروميكانيكية آمنة ودقيقة وموثوقة، صُممت لضمان الاستدامة والكفاءة التشغيلية على المدى الطويل.',
       expertTitle: 'الخبرة المحلية',
       expertDesc: 'جذور عميقة في السوق القطري، بالتعاون مع كبار المقاولين لتسليم مشاريع معقدة في جميع أنحاء الدوحة وخارجها.'
- },
+    },
     services: {
       title: 'خدماتنا',
       subtitle: 'قدراتنا في الأعمال الميكانيكية والكهربائية والسباكة (MEP) مبنية حول تقديم تصاميم مجدية واقتصادية.',
@@ -213,7 +221,7 @@ export const TRANSLATIONS = {
       items: []
     },
     contact: {
-     title: 'لنتحدث عن مشروعك',
+      title: 'لنتحدث عن مشروعك',
       subtitle: 'هل تحتاج إلى خدمات MEP خبيرة لمشروعك الإنشائي القادم في قطر؟ فريقنا جاهز لتقديم استشارة مفصلة.',
       call: 'اتصل بنا',
       email: 'بريدنا الإلكتروني',
@@ -251,6 +259,14 @@ export const TRANSLATIONS = {
       header: 'مساعد ABUAC',
       sub: 'خبير MEP',
       powered: 'مدعوم بواسطة Gemini AI'
+    },
+    careers: {
+      hero: {
+        tag: 'ابنِ مستقبلك المهني مع أبو عرب.',
+        title1: 'وظائف في',
+        title2: 'أبو عرب',
+        subtitle: 'انضم إلى فريق يقدّم مشاريع ميكانيكية وكهربائية وصحية عالية التأثير في قطر. اكتشف الفرص المتاحة في الهندسة، تنفيذ المشاريع، والعمليات الميدانية.'
+      }
     }
   }
 };
