@@ -29,7 +29,6 @@ const Contact: React.FC = () => {
                   <div>
                     <p className="text-sm text-cyan-500 uppercase tracking-widest font-bold mb-1">{t('contact.call')}</p>
                     <p className="text-lg font-display" dir="ltr">{t('contact.phone1')}</p>
-                    <p className="text-lg font-display" dir="ltr">{t('contact.phone2')}</p>
                   </div>
                 </div>
                 
