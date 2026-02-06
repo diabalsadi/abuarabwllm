@@ -18,6 +18,9 @@ export interface Project {
   category: string;
   location: string;
   image: string;
+  status?: 'ongoing' | 'finished';
+  description?: string;
+  date?: string;
 }
 
 export interface ChatMessage {

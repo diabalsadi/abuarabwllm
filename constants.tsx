@@ -25,42 +25,55 @@ export const PROJECTS: Project[] = [
     title: "Al Khor Warehouses",
     category: "Industrial MEP",
     location: "Al Khor, Qatar",
-    image: 'wearhouses-project.jpeg'
-    // image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
+    image: 'wearhouses-project.jpeg',
+    status: 'finished',
+    description: 'Complete MEP installation for industrial warehouses including electrical distribution, HVAC systems, and fire protection systems.',
+    date: 'December 2024'
   },
   {
     title: "Al Messila Apartments",
     category: "Residential HVAC & Plumbing",
     location: "Messila, Doha",
-    image: 'massila-apartments.png'
-    // image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800"
+    image: 'massila-apartments.png',
+    status: 'finished',
+    description: 'Comprehensive HVAC and plumbing solutions for luxury residential apartments with advanced climate control systems.',
+    date: 'November 2024'
   },
   {
     title: "Les Maisons Blanches",
     category: "Hospitality MEP",
     location: "Lusail, Qatar",
-    image: 'https://instagram.famm12-1.fna.fbcdn.net/v/t51.75761-15/469977470_18473105659016210_6862973803698448789_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=MzUyNDI1MjE4NDAxMzc2ODUwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTM1MC5zZHIuQzMifQ%3D%3D&_nc_ohc=4jtCOXrFxscQ7kNvwGOt-_X&_nc_oc=AdnlbQDuVzwQ7jTGRgnfpEwQKepMxR1YGj13rFh8risaRMJ8z_sdWqFsDKHZsy42InE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.famm12-1.fna&_nc_gid=JwuW7TKvRDP_CnqFl1JHBg&oh=00_AfuBVZfe64Rhjy2__HVuK4mE4z9h1uFFHttrC-s_nZWbww&oe=69882E48'
-    // image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800"
+    image: 'https://instagram.famm12-1.fna.fbcdn.net/v/t51.75761-15/469977470_18473105659016210_6862973803698448789_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=MzUyNDI1MjE4NDAxMzc2ODUwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTM1MC5zZHIuQzMifQ%3D%3D&_nc_ohc=4jtCOXrFxscQ7kNvwGOt-_X&_nc_oc=AdnlbQDuVzwQ7jTGRgnfpEwQKepMxR1YGj13rFh8risaRMJ8z_sdWqFsDKHZsy42InE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.famm12-1.fna&_nc_gid=JwuW7TKvRDP_CnqFl1JHBg&oh=00_AfuBVZfe64Rhjy2__HVuK4mE4z9h1uFFHttrC-s_nZWbww&oe=69882E48',
+    status: 'ongoing',
+    description: 'Full MEP services for luxury hospitality project including VRF systems, advanced lighting, and building automation.',
+    date: 'January 2025'
   },
   {
     title: "Lusail Fox Hills",
     category: "Residential & Commercial",
     location: "Lusail City",
-    image: "foxhills.jpeg"
+    image: "foxhills.jpeg",
+    status: 'ongoing',
+    description: 'Mixed-use development featuring integrated MEP solutions for both residential and commercial spaces.',
+    date: 'February 2025'
   },
   {
     title: "Um Salal Palace",
     category: "Luxury Residential",
     location: "Umm Salal",
-    image: "umm-salal-palace.jpeg"
-    // image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800"
+    image: "umm-salal-palace.jpeg",
+    status: 'finished',
+    description: 'Premium MEP installation for luxury palace including smart home automation, advanced HVAC, and security systems.',
+    date: 'October 2024'
   },
   {
     title: "Barzan Tower Renovation",
     category: "Restoration & MEP",
     location: "Doha",
-    image: "barzan-tower.jpeg"
-    // image: "https://images.unsplash.com/photo-1533395427226-7881e43666e6?auto=format&fit=crop&q=80&w=800"
+    image: "barzan-tower.jpeg",
+    status: 'finished',
+    description: 'Complete renovation and upgrade of MEP systems in historic tower with modern energy-efficient solutions.',
+    date: 'September 2024'
   }
 ];
 
@@ -121,6 +134,27 @@ export const TRANSLATIONS = {
       title: 'List Of Projects',
       subtitle: 'A track record of delivering successful MEP solutions across residential, commercial, and industrial sites in Qatar.',
       viewAll: 'View All Projects',
+    },
+    ourProjects: {
+      hero: {
+        tag: 'Delivering Excellence Across Qatar',
+        title1: 'Our',
+        title2: 'Projects',
+        subtitle: 'Explore our portfolio of successfully delivered MEP projects across residential, commercial, and industrial sectors in Qatar.'
+      },
+      filterLabel: 'Filter by Status',
+      allProjects: 'All Projects',
+      ongoing: 'Ongoing',
+      finished: 'Finished',
+      statusOngoing: 'ONGOING',
+      statusFinished: 'FINISHED',
+      noProjects: 'No projects found',
+      pagination: {
+        previous: 'Previous',
+        next: 'Next',
+        page: 'Page',
+        of: 'of'
+      }
     },
     contact: {
       title: 'Let\'s Discuss Your Project',
@@ -218,7 +252,71 @@ export const TRANSLATIONS = {
       title: 'قائمة المشاريع',
       subtitle: 'نسعى جاهدين لتجاوز توقعات العملاء في القطاعات التجارية والسكنية والصناعية والطبية والضيافة والتعليمية.',
       viewAll: 'عرض كل المشاريع',
-      items: []
+      items: [
+        {
+          title: "مستودعات الخور",
+          category: "الأعمال الكهروميكانيكية الصناعية",
+          location: "الخور، قطر",
+          description: "تركيب كامل للأنظمة الكهروميكانيكية للمستودعات الصناعية بما في ذلك التوزيع الكهربائي وأنظمة التكييف وأنظمة الحماية من الحرائق.",
+          date: "ديسمبر 2024"
+        },
+        {
+          title: "شقق المسيلة",
+          category: "التكييف والسباكة السكنية",
+          location: "المسيلة، الدوحة",
+          description: "حلول شاملة للتكييف والسباكة للشقق السكنية الفاخرة مع أنظمة تحكم متقدمة في المناخ.",
+          date: "نوفمبر 2024"
+        },
+        {
+          title: "ليه ميزون بلانش",
+          category: "الأعمال الكهروميكانيكية للضيافة",
+          location: "لوسيل، قطر",
+          description: "خدمات كهروميكانيكية كاملة لمشروع ضيافة فاخر بما في ذلك أنظمة VRF والإضاءة المتقدمة وأتمتة المباني.",
+          date: "يناير 2025"
+        },
+        {
+          title: "فوكس هيلز لوسيل",
+          category: "سكني وتجاري",
+          location: "مدينة لوسيل",
+          description: "تطوير متعدد الاستخدامات يتميز بحلول كهروميكانيكية متكاملة للمساحات السكنية والتجارية.",
+          date: "فبراير 2025"
+        },
+        {
+          title: "قصر أم صلال",
+          category: "سكني فاخر",
+          location: "أم صلال",
+          description: "تركيب كهروميكانيكي متميز لقصر فاخر بما في ذلك أتمتة المنزل الذكي والتكييف المتقدم وأنظمة الأمان.",
+          date: "أكتوبر 2024"
+        },
+        {
+          title: "تجديد برج بارزان",
+          category: "الترميم والأعمال الكهروميكانيكية",
+          location: "الدوحة",
+          description: "تجديد وترقية كاملة للأنظمة الكهروميكانيكية في البرج التاريخي بحلول حديثة موفرة للطاقة.",
+          date: "سبتمبر 2024"
+        }
+      ]
+    },
+    ourProjects: {
+      hero: {
+        tag: 'تقديم التميز في جميع أنحاء قطر',
+        title1: 'مشاريعنا',
+        title2: 'المنجزة',
+        subtitle: 'استكشف محفظة مشاريعنا الناجحة في القطاعات السكنية والتجارية والصناعية في قطر.'
+      },
+      filterLabel: 'تصفية حسب الحالة',
+      allProjects: 'جميع المشاريع',
+      ongoing: 'قيد التنفيذ',
+      finished: 'مكتمل',
+      statusOngoing: 'قيد التنفيذ',
+      statusFinished: 'مكتمل',
+      noProjects: 'لا توجد مشاريع',
+      pagination: {
+        previous: 'السابق',
+        next: 'التالي',
+        page: 'صفحة',
+        of: 'من'
+      }
     },
     contact: {
       title: 'لنتحدث عن مشروعك',
