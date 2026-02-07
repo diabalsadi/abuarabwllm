@@ -312,6 +312,14 @@ export const TRANSLATIONS = {
         subtitle: 'Join a team delivering high-impact MEP projects across Qatar. Explore opportunities in engineering, project delivery, and field operations. Send your CV to ',
         email: 'recruitment@abuac.com'
       }
+    },
+    director: {
+      title: 'Message From Our General Director',
+      message1: 'In just six months, Abuac contacting has emerged as one of the fastest-growing MEP companies in Qatar.',
+      message2: 'Our rapid success is built on a simple promise: delivering high-quality, integrated engineering solutions with speed and precision. We are proud to support Qatar’s ambitious development and remain committed to excellence in every project we touch.',
+      message3: 'Thank you for trusting us to power your infrastructure. We are just getting started.',
+      name: 'Mohammad Abu Arab',
+      role: 'General Director'
     }
   },
   ar: {
@@ -523,6 +531,14 @@ export const TRANSLATIONS = {
         subtitle: 'انضم إلى فريق يقدّم مشاريع ميكانيكية وكهربائية وصحية عالية التأثير في قطر. إكتشف الفرص المتاحة في الهندسة، تنفيذ المشاريع، والعمليات الميدانية. أرسل سيراتك الذاتية إلى  ',
         email: 'recruitment@abuac.com'
       }
+    },
+    director: {
+      title: 'رسالة المدير العام',
+      message1: 'في غضون ستة أشهر فقط، برزت شركة أبو عرب للمقاولات كواحدة من أسرع شركات MEP نمواً في قطر.',
+      message2: 'إن نجاحنا السريع مبني على وعد بسيط: تقديم حلول هندسية متكاملة عالية الجودة بسرعة ودقة. نحن فخورون بدعم التنمية الطموحة في قطر ونظل ملتزمين بالتميز في كل مشروع نقوم به.',
+      message3: 'شكراً لثقتكم بنا لتعزيز بنيتكم التحتية. نحن لا نزال في البداية.',
+      name: 'محمد أبو عرب',
+      role: 'المدير العام'
     }
   }
 };
