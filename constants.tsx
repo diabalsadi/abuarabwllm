@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
     category: "Residential HVAC & Plumbing",
     location: "Messila, Doha",
     image: 'massila-apartments.png',
-    status: 'finished',
+    status: 'ongoing',
     description: 'Comprehensive HVAC and plumbing solutions for luxury residential apartments with advanced climate control systems.',
     date: 'November 2024'
   },
@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
     date: 'January 2025'
   },
   {
-    title: "Lusail Fox Hills",
+    title: "Lusail Fox Hills -1",
     category: "Residential & Commercial",
     location: "Lusail City",
     image: "foxhills.jpeg",
@@ -62,7 +62,7 @@ export const PROJECTS: Project[] = [
     category: "Industrial MEP",
     location: "Umm Salal",
     image: "jery.png",
-    status: 'finished',
+    status: 'ongoing',
     description: 'Premium MEP installation for luxury palace including smart home automation, advanced HVAC, and security systems.',
     date: 'October 2024'
   },
@@ -71,9 +71,18 @@ export const PROJECTS: Project[] = [
     category: "Restoration & MEP",
     location: "Doha",
     image: "barzan-tower.jpeg",
-    status: 'finished',
+    status: 'ongoing',
     description: 'Complete renovation and upgrade of MEP systems in historic tower with modern energy-efficient solutions.',
     date: 'September 2024'
+  },
+  {
+    title: "Al Wukair Villa",
+    category: "Residential MEP",
+    location: "Al Wukair, Qatar",
+    image: "umm-salal-palace.jpeg",
+    status: 'ongoing',
+    description: 'Comprehensive MEP works for a luxury private villa, including electrical, plumbing, and HVAC systems.',
+    date: 'January 2025'
   }
 ];
 
@@ -159,7 +168,7 @@ export const TRANSLATIONS = {
           date: "January 2025"
         },
         {
-          title: "Lusail Fox Hills",
+          title: "Lusail Fox Hills - 1",
           category: "Residential & Commercial",
           location: "Lusail City",
           description: "Mixed-use development featuring integrated MEP solutions for both residential and commercial spaces.",
@@ -178,6 +187,13 @@ export const TRANSLATIONS = {
           location: "Doha",
           description: "Complete renovation and upgrade of MEP systems in historic tower with modern energy-efficient solutions.",
           date: "September 2024"
+        },
+        {
+          title: "Al Wukair Villa",
+          category: "Residential MEP",
+          location: "Al Wukair, Qatar",
+          description: "Comprehensive MEP works for a luxury private villa, including electrical, plumbing, and HVAC systems.",
+          date: "January 2025"
         }
       ]
     },
@@ -201,9 +217,14 @@ export const TRANSLATIONS = {
           location: "Lusail, Qatar",
         },
         {
-          title: "Lusail Fox Hills",
+          title: "Lusail Fox Hills - 1",
           category: "Residential & Commercial",
           location: "Lusail City",
+        },
+        {
+          title: "Al Wukair Villa",
+          category: "Residential MEP",
+          location: "Al Wukair, Qatar",
         },
       ]
     },
@@ -350,7 +371,7 @@ export const TRANSLATIONS = {
           date: "يناير 2025"
         },
         {
-          title: "فوكس هيلز لوسيل",
+          title: "فوكس هيلز لوسيل - 1",
           category: "سكني وتجاري",
           location: "مدينة لوسيل",
           description: "تطوير متعدد الاستخدامات يتميز بحلول كهروميكانيكية متكاملة للمساحات السكنية والتجارية.",
@@ -369,6 +390,13 @@ export const TRANSLATIONS = {
           location: "الدوحة",
           description: "تجديد وترقية كاملة للأنظمة الكهروميكانيكية في البرج التاريخي بحلول حديثة موفرة للطاقة.",
           date: "سبتمبر 2024"
+        },
+        {
+          title: "فيلا الوكير",
+          category: "الأعمال الكهروميكانيكية السكنية",
+          location: "الوكير، قطر",
+          description: "أعمال كهروميكانيكية شاملة لفيلا خاصة فاخرة، تشمل الأنظمة الكهربائية والسباكة وأنظمة التكييف.",
+          date: "يناير 2025"
         }
       ]
     },
@@ -395,6 +423,11 @@ export const TRANSLATIONS = {
           title: "فوكس هيلز لوسيل",
           category: "سكني وتجاري",
           location: "مدينة لوسيل",
+        },
+        {
+          title: "فيلا الوكير",
+          category: "الأنظمة السكنية",
+          location: "الوكير، قطر",
         }
       ]
     },

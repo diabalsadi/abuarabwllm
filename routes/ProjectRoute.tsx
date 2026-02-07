@@ -130,12 +130,12 @@ const ProjectRoute = () => {
                                                         <span className="font-medium">{project.location}</span>
                                                     </div>
 
-                                                    {project.date && (
+                                                    {/* {project.date && (
                                                         <div className="flex items-center text-slate-700">
                                                             <Calendar size={18} className="text-cyan-500 me-2" />
                                                             <span className="font-medium">{project.date}</span>
                                                         </div>
-                                                    )}
+                                                    )} */}
                                                 </div>
                                             </div>
                                         </div>
