@@ -22,8 +22,8 @@ export default async function handler(
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS,
+            user: process.env.EMAIL_USER || 'info@abuac.com',
+            pass: process.env.EMAIL_PASS || 'Yob97216@',
         },
     });
 
