@@ -58,10 +58,10 @@ export const PROJECTS: Project[] = [
     date: 'February 2025'
   },
   {
-    title: "Um Salal Palace",
-    category: "Luxury Residential",
+    title: "Jery Al Samar - Warehouses",
+    category: "Industrial MEP",
     location: "Umm Salal",
-    image: "umm-salal-palace.jpeg",
+    image: "jery.png",
     status: 'finished',
     description: 'Premium MEP installation for luxury palace including smart home automation, advanced HVAC, and security systems.',
     date: 'October 2024'
@@ -179,6 +179,32 @@ export const TRANSLATIONS = {
           description: "Complete renovation and upgrade of MEP systems in historic tower with modern energy-efficient solutions.",
           date: "September 2024"
         }
+      ]
+    },
+    featuredProjects: {
+      title: 'Featured Projects',
+      subtitle: 'Highlighting our key contributions to Qatar\'s infrastructure development.',
+      items: [
+        {
+          title: "Al Khor Warehouses",
+          category: "Industrial MEP",
+          location: "Al Khor, Qatar",
+        },
+        {
+          title: "Al Messila Apartments",
+          category: "Residential HVAC & Plumbing",
+          location: "Messila, Doha",
+        },
+        {
+          title: "Les Maisons Blanches",
+          category: "Hospitality MEP",
+          location: "Lusail, Qatar",
+        },
+        {
+          title: "Lusail Fox Hills",
+          category: "Residential & Commercial",
+          location: "Lusail City",
+        },
       ]
     },
     ourProjects: {
@@ -343,6 +369,32 @@ export const TRANSLATIONS = {
           location: "الدوحة",
           description: "تجديد وترقية كاملة للأنظمة الكهروميكانيكية في البرج التاريخي بحلول حديثة موفرة للطاقة.",
           date: "سبتمبر 2024"
+        }
+      ]
+    },
+    featuredProjects: {
+      title: 'مشاريع مميزة',
+      subtitle: 'تسليط الضوء على مساهماتنا الرئيسية في تطوير البنية التحتية في قطر.',
+      items: [
+        {
+          title: "مستودعات الخور",
+          category: "الأعمال الكهروميكانيكية الصناعية",
+          location: "الخور، قطر",
+        },
+        {
+          title: "شقق المسيلة",
+          category: "التكييف والسباكة السكنية",
+          location: "المسيلة، الدوحة",
+        },
+        {
+          title: "ليه ميزون بلانش",
+          category: "الأعمال الكهروميكانيكية للضيافة",
+          location: "لوسيل، قطر",
+        },
+        {
+          title: "فوكس هيلز لوسيل",
+          category: "سكني وتجاري",
+          location: "مدينة لوسيل",
         }
       ]
     },
