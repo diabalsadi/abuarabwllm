@@ -32,7 +32,7 @@ export default async function handler(
     try {
         await transporter.sendMail({
             from: `"ABUAC Website" <${process.env.EMAIL_USER}>`,
-            to: 'mabuarab@abuac.com',
+            to: 'info@abuac.com',
             subject: `New Inquiry from ${name} - ABUAC Website`,
             text: `
         Name: ${name}
