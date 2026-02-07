@@ -290,7 +290,10 @@ export const TRANSLATIONS = {
         name: 'Name',
         email: 'Email',
         message: 'How can we help you?'
-      }
+      },
+      success: 'Thank you! Your message has been sent successfully. We will get back to you soon.',
+      error: 'Oops! Something went wrong. Please try again later.',
+      sending: 'Sending...'
     },
     footer: {
       desc: 'Abu Arab Contracting W.L.L (ABUAC) provides Full MEP design and Engineering Energy solutions in Qatar.',
@@ -512,7 +515,10 @@ export const TRANSLATIONS = {
         name: 'الاسم',
         email: 'البريد الإلكتروني',
         message: 'كيف يمكننا مساعدتك؟'
-      }
+      },
+      success: 'شكراً لك! تم إرسال رسالتك بنجاح. سنقوم بالرد عليك قريباً.',
+      error: 'عذراً! حدث خطأ ما. يرجى المحاولة مرة أخرى لاحقاً.',
+      sending: 'جاري الإرسال...'
     },
     footer: {
       desc: 'شركة أبو عرب للمقاولات ذ.م.م (ABUAC) تقدم تصميم MEP كامل وحلول الطاقة الهندسية في قطر.',
