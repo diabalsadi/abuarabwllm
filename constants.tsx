@@ -83,6 +83,15 @@ export const PROJECTS: Project[] = [
     status: 'ongoing',
     description: 'Comprehensive MEP works for a luxury private villa, including electrical, plumbing, and HVAC systems.',
     date: 'January 2025'
+  },
+  {
+    title: "Lusail Fox Hills - 2",
+    category: "Residential & Commercial",
+    location: "Lusail City",
+    image: "foxhills.jpeg",
+    status: 'ongoing',
+    description: 'Phase 2 of Fox Hills development featuring integrated MEP solutions for premium residential and commercial units.',
+    date: 'March 2025'
   }
 ];
 
@@ -194,6 +203,13 @@ export const TRANSLATIONS = {
           location: "Al Wukair, Qatar",
           description: "Comprehensive MEP works for a luxury private villa, including electrical, plumbing, and HVAC systems.",
           date: "January 2025"
+        },
+        {
+          title: "Lusail Fox Hills - 2",
+          category: "Residential & Commercial",
+          location: "Lusail City",
+          description: "Phase 2 of Fox Hills development featuring integrated MEP solutions for premium residential and commercial units.",
+          date: "March 2025"
         }
       ]
     },
@@ -397,6 +413,13 @@ export const TRANSLATIONS = {
           location: "الوكير، قطر",
           description: "أعمال كهروميكانيكية شاملة لفيلا خاصة فاخرة، تشمل الأنظمة الكهربائية والسباكة وأنظمة التكييف.",
           date: "يناير 2025"
+        },
+        {
+          title: "فوكس هيلز لوسيل - 2",
+          category: "سكني وتجاري",
+          location: "مدينة لوسيل",
+          description: "المرحلة الثانية من تطوير فوكس هيلز والتي تتميز بحلول كهروميكانيكية متكاملة للوحدات السكنية والتجارية المتميزة.",
+          date: "مارس 2025"
         }
       ]
     },
