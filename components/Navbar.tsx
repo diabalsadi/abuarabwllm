@@ -1,15 +1,17 @@
 
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Globe, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Menu, X, Phone, Globe, ChevronRight, ChevronDown } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
   const navigate = useNavigate();
+  const aboutTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +37,16 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: t('nav.home'), href: '#home' },
-    { name: t('nav.about'), href: '#about' },
+    {
+      name: t('nav.about'),
+      href: '#about',
+      isDropdown: true,
+      subLinks: [
+        { name: t('nav.whoWeAre'), href: '#about' },
+        { name: t('nav.directorMessage'), href: '#director-message' },
+        { name: t('nav.clients'), href: '#clients' },
+      ]
+    },
     { name: t('nav.services'), href: '#services' },
     { name: t('nav.projects'), href: '#projects' },
     { name: t('nav.companyProfile'), href: '/companyProfile.pdf', isExternal: true },
@@ -50,6 +61,7 @@ const Navbar: React.FC = () => {
 
     e.preventDefault();
     setIsOpen(false);
+    setIsAboutOpen(false);
 
     const targetId = href.replace('#', '');
 
@@ -65,6 +77,17 @@ const Navbar: React.FC = () => {
       // Update hash in URL without jump if possible (optional)
       window.history.pushState(null, '', href);
     }
+  };
+
+  const handleAboutMouseEnter = () => {
+    if (aboutTimeoutRef.current) clearTimeout(aboutTimeoutRef.current);
+    setIsAboutOpen(true);
+  };
+
+  const handleAboutMouseLeave = () => {
+    aboutTimeoutRef.current = setTimeout(() => {
+      setIsAboutOpen(false);
+    }, 150);
   };
 
   // Determine navbar style based on scroll or open state
@@ -94,18 +117,50 @@ const Navbar: React.FC = () => {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-10 rtl:space-x-reverse">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href, link.isExternal)}
-                target={link.isExternal ? "_blank" : undefined}
-                rel={link.isExternal ? "noopener noreferrer" : undefined}
-                className={`text-sm font-bold uppercase tracking-widest transition-all hover:text-cyan-500 relative group py-2 ${isSolid ? 'text-slate-700' : 'text-white'
-                  }`}
-              >
-                {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-500 transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              link.isDropdown ? (
+                <div
+                  key={link.name}
+                  className="relative group py-2"
+                  onMouseEnter={handleAboutMouseEnter}
+                  onMouseLeave={handleAboutMouseLeave}
+                >
+                  <button
+                    className={`text-sm font-bold uppercase tracking-widest transition-all hover:text-cyan-500 flex items-center gap-1 ${isSolid ? 'text-slate-700' : 'text-white'}`}
+                  >
+                    {link.name}
+                    <ChevronDown size={14} className={`transition-transform duration-300 ${isAboutOpen ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  {/* Dropdown Menu */}
+                  <div className={`absolute top-full start-0 mt-2 w-56 bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 origin-top ${isAboutOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'}`}>
+                    <div className="py-2">
+                      {link.subLinks?.map((sub) => (
+                        <a
+                          key={sub.name}
+                          href={sub.href}
+                          onClick={(e) => scrollToSection(e, sub.href)}
+                          className="block px-6 py-3 text-[11px] font-bold uppercase tracking-widest text-slate-700 hover:bg-slate-50 hover:text-cyan-500 transition-colors border-b border-slate-50 last:border-0"
+                        >
+                          {sub.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => scrollToSection(e, link.href, link.isExternal)}
+                  target={link.isExternal ? "_blank" : undefined}
+                  rel={link.isExternal ? "noopener noreferrer" : undefined}
+                  className={`text-sm font-bold uppercase tracking-widest transition-all hover:text-cyan-500 relative group py-2 ${isSolid ? 'text-slate-700' : 'text-white'
+                    }`}
+                >
+                  {link.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              )
             ))}
 
             <div className={`h-6 w-px hidden lg:block ${isSolid ? 'bg-gray-200' : 'bg-gray-300/30'}`}></div>
@@ -155,17 +210,43 @@ const Navbar: React.FC = () => {
         }`}>
         <div className="flex flex-col h-full overflow-y-auto pb-6">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              target={link.isExternal ? "_blank" : undefined}
-              rel={link.isExternal ? "noopener noreferrer" : undefined}
-              className="py-4 text-lg font-black text-slate-900 border-b border-gray-100 flex justify-between items-center active:bg-gray-50 transition-colors"
-              onClick={(e) => scrollToSection(e, link.href, link.isExternal)}
-            >
-              {link.name}
-              <ChevronRight className={`text-cyan-500 ${language === 'ar' ? 'rotate-180' : ''}`} size={20} />
-            </a>
+            <div key={link.name}>
+              {link.isDropdown ? (
+                <div className="flex flex-col">
+                  <button
+                    onClick={() => setIsAboutOpen(!isAboutOpen)}
+                    className="py-4 text-lg font-black text-slate-900 border-b border-gray-100 flex justify-between items-center transition-colors w-full"
+                  >
+                    {link.name}
+                    <ChevronDown className={`text-cyan-500 transition-transform ${isAboutOpen ? 'rotate-180' : ''}`} size={20} />
+                  </button>
+                  <div className={`bg-slate-50 overflow-hidden transition-all duration-300 ${isAboutOpen ? 'max-h-64' : 'max-h-0'}`}>
+                    {link.subLinks?.map((sub) => (
+                      <a
+                        key={sub.name}
+                        href={sub.href}
+                        onClick={(e) => scrollToSection(e, sub.href)}
+                        className="ps-8 py-4 text-slate-600 font-bold border-b border-white flex justify-between items-center"
+                      >
+                        {sub.name}
+                        <ChevronRight className={`text-cyan-500/50 ${language === 'ar' ? 'rotate-180' : ''}`} size={16} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <a
+                  href={link.href}
+                  target={link.isExternal ? "_blank" : undefined}
+                  rel={link.isExternal ? "noopener noreferrer" : undefined}
+                  className="py-4 text-lg font-black text-slate-900 border-b border-gray-100 flex justify-between items-center active:bg-gray-50 transition-colors"
+                  onClick={(e) => scrollToSection(e, link.href, link.isExternal)}
+                >
+                  {link.name}
+                  <ChevronRight className={`text-cyan-500 ${language === 'ar' ? 'rotate-180' : ''}`} size={20} />
+                </a>
+              )}
+            </div>
           ))}
           <div className="mt-6">
             <a

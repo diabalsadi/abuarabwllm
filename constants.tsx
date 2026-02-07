@@ -115,7 +115,10 @@ export const TRANSLATIONS = {
       contactBtn: 'CONTACT US',
       companySub: 'MEP Works',
       careers: 'Careers',
-      companyProfile: 'Company Profile'
+      companyProfile: 'Company Profile',
+      whoWeAre: 'Who We Are',
+      directorMessage: 'Genral Director Message',
+      clients: 'Clients'
     },
     hero: {
       tag: 'Your Trusted Partner for Integrated MEP Solutions.',
@@ -332,7 +335,10 @@ export const TRANSLATIONS = {
       contactBtn: 'اتصل بنا',
       companySub: 'أعمال الميكانيكا والكهرباء',
       careers: 'وظائف',
-      companyProfile: 'ملف الشركة'
+      companyProfile: 'ملف الشركة',
+      whoWeAre: 'من نحن',
+      directorMessage: 'رسالة المدير العام',
+      clients: 'عملاؤنا'
     },
     hero: {
       tag: 'خياركم الموثوق للحلول الكهروميكانيكية المتكاملة',

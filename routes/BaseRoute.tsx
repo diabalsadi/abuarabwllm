@@ -12,9 +12,10 @@ const BaseRoute = () => {
 
     <main className="flex-grow">
       <Hero />
-      <Clients />
       <About />
       <DirectorMessage />
+      <Clients />
+
       <Services />
       <Projects />
       <Contact />

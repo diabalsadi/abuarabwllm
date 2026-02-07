@@ -9,7 +9,7 @@ const Projects: React.FC = () => {
   const { t } = useLanguage();
   const projectsData = t('featuredProjects.items');
   // Use data from constants if translations are empty/default
-  const items = Array.isArray(projectsData) && projectsData.length > 0 ? projectsData : PROJECTS;
+  const items = Array.isArray(projectsData) && projectsData.length > 0 ? projectsData.slice(0, 4) : PROJECTS;
 
   return (
     <section id="projects" className="py-12 md:py-24 bg-white scroll-mt-24">
