@@ -1,12 +1,15 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Globe, ChevronRight } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +18,20 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Handle scrolling when hash changes or after navigation
+  useEffect(() => {
+    if (location.pathname === '/' && location.hash) {
+      const targetId = location.hash.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        // Small delay to ensure the page has rendered if coming from another route
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   const navLinks = [
     { name: t('nav.home'), href: '#home' },
@@ -27,10 +44,20 @@ const Navbar: React.FC = () => {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsOpen(false);
+
     const targetId = href.replace('#', '');
-    const element = document.getElementById(targetId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+
+    if (location.pathname !== '/') {
+      // Navigate to home with hash
+      navigate(`/${href}`);
+    } else {
+      // Already on home, just scroll
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      // Update hash in URL without jump if possible (optional)
+      window.history.pushState(null, '', href);
     }
   };
 
@@ -38,16 +65,15 @@ const Navbar: React.FC = () => {
   const isSolid = scrolled || isOpen;
 
   return (
-    <nav className={`fixed w-full z-[100] transition-all duration-300 ${
-      isSolid 
-        ? 'bg-white shadow-lg py-3' 
+    <nav className={`fixed w-full z-[100] transition-all duration-300 ${isSolid
+        ? 'bg-white shadow-lg py-3'
         : 'bg-transparent py-4 md:py-6'
-    }`}>
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <a 
-            href="#home" 
-            onClick={(e) => scrollToSection(e, '#home')} 
+          <a
+            href="#home"
+            onClick={(e) => scrollToSection(e, '#home')}
             className="flex-shrink-0 flex items-center group relative z-[101]"
           >
             {/* Rebranded Logo: Navy ABU + Cyan AC */}
@@ -66,24 +92,22 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className={`text-sm font-bold uppercase tracking-widest transition-all hover:text-cyan-500 relative group py-2 ${
-                  isSolid ? 'text-slate-700' : 'text-white'
-                }`}
+                className={`text-sm font-bold uppercase tracking-widest transition-all hover:text-cyan-500 relative group py-2 ${isSolid ? 'text-slate-700' : 'text-white'
+                  }`}
               >
                 {link.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
-            
+
             <div className={`h-6 w-px hidden lg:block ${isSolid ? 'bg-gray-200' : 'bg-gray-300/30'}`}></div>
 
             <button
               onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
-              className={`flex items-center text-xs font-black border-2 rounded-lg px-4 py-1.5 transition-all uppercase tracking-tighter ${
-                isSolid 
-                  ? 'border-blue-950/10 text-blue-950 hover:bg-blue-50' 
+              className={`flex items-center text-xs font-black border-2 rounded-lg px-4 py-1.5 transition-all uppercase tracking-tighter ${isSolid
+                  ? 'border-blue-950/10 text-blue-950 hover:bg-blue-50'
                   : 'border-white/20 text-white hover:bg-white/10'
-              }`}
+                }`}
             >
               <Globe className="w-3.5 h-3.5 me-2" />
               {language === 'en' ? 'عربي' : 'English'}
@@ -101,7 +125,7 @@ const Navbar: React.FC = () => {
 
           {/* Mobile menu controls */}
           <div className="md:hidden flex items-center space-x-3 rtl:space-x-reverse relative z-[101]">
-             <button
+            <button
               onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
               className={`${isSolid ? 'text-blue-950 border-blue-950/20' : 'text-white border-white/30'} text-xs font-black border-2 rounded-lg px-2.5 py-1 uppercase`}
             >
@@ -119,9 +143,8 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Nav Overlay */}
-      <div className={`fixed inset-0 bg-white z-[90] transition-all duration-300 ease-in-out md:hidden flex flex-col pt-20 px-6 ${
-        isOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none -translate-y-4'
-      }`}>
+      <div className={`fixed inset-0 bg-white z-[90] transition-all duration-300 ease-in-out md:hidden flex flex-col pt-20 px-6 ${isOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none -translate-y-4'
+        }`}>
         <div className="flex flex-col h-full overflow-y-auto pb-6">
           {navLinks.map((link) => (
             <a
@@ -135,7 +158,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <div className="mt-6">
-             <a
+            <a
               href="#contact"
               onClick={(e) => scrollToSection(e, '#contact')}
               className="w-full bg-blue-950 text-white p-4 rounded-xl text-lg font-black flex items-center justify-center shadow-lg active:scale-95 transition-transform"
