@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
           <a
             href="#home"
             onClick={(e) => scrollToSection(e, '#home')}
-            className="flex-shrink-0 flex items-center group relative z-[101]"
+            className="flex-shrink-0 flex items-center group relative z-[101] me-8"
           >
             {/* Rebranded Logo: Navy ABU + Cyan AC */}
             <span className={`text-2xl md:text-3xl font-black tracking-tighter transition-colors duration-300 ${isSolid ? 'text-blue-950' : 'text-white'}`}>
@@ -92,7 +92,7 @@ const Navbar: React.FC = () => {
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
+          <div className="hidden md:flex items-center space-x-10 rtl:space-x-reverse">
             {navLinks.map((link) => (
               <a
                 key={link.name}

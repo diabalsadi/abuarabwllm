@@ -28,6 +28,14 @@ const SharedHero = ({ hero, imgSrc }) => {
 
                     <p className="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed font-light max-w-2xl reveal-3">
                         {hero.subtitle}
+                        {hero.email && (
+                            <a
+                                href={`mailto:${hero.email}`}
+                                className="text-cyan-400 font-bold hover:text-cyan-300 transition-colors underline underline-offset-4 ms-1"
+                            >
+                                {hero.email}
+                            </a>
+                        )}
                     </p>
                 </div>
             </div>

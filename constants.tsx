@@ -96,6 +96,7 @@ export const TRANSLATIONS = {
       contact: 'Contact',
       contactBtn: 'CONTACT US',
       companySub: 'MEP Works',
+      careers: 'Careers',
       companyProfile: 'Company Profile'
     },
     hero: {
@@ -135,6 +136,50 @@ export const TRANSLATIONS = {
       title: 'List Of Projects',
       subtitle: 'A track record of delivering successful MEP solutions across residential, commercial, and industrial sites in Qatar.',
       viewAll: 'View All Projects',
+      items: [
+        {
+          title: "Al Khor Warehouses",
+          category: "Industrial MEP",
+          location: "Al Khor, Qatar",
+          description: "Complete MEP installation for industrial warehouses including electrical distribution, HVAC systems, and fire protection systems.",
+          date: "December 2024"
+        },
+        {
+          title: "Al Messila Apartments",
+          category: "Residential HVAC & Plumbing",
+          location: "Messila, Doha",
+          description: "Comprehensive HVAC and plumbing solutions for luxury residential apartments with advanced climate control systems.",
+          date: "November 2024"
+        },
+        {
+          title: "Les Maisons Blanches",
+          category: "Hospitality MEP",
+          location: "Lusail, Qatar",
+          description: "Full MEP services for luxury hospitality project including VRF systems, advanced lighting, and building automation.",
+          date: "January 2025"
+        },
+        {
+          title: "Lusail Fox Hills",
+          category: "Residential & Commercial",
+          location: "Lusail City",
+          description: "Mixed-use development featuring integrated MEP solutions for both residential and commercial spaces.",
+          date: "February 2025"
+        },
+        {
+          title: "Jery Al Samar - Warehouses",
+          category: "Industrial MEP",
+          location: "Umm Salal",
+          description: "Premium MEP installation for luxury palace including smart home automation, advanced HVAC, and security systems.",
+          date: "October 2024"
+        },
+        {
+          title: "Barzan Tower Renovation",
+          category: "Restoration & MEP",
+          location: "Doha",
+          description: "Complete renovation and upgrade of MEP systems in historic tower with modern energy-efficient solutions.",
+          date: "September 2024"
+        }
+      ]
     },
     ourProjects: {
       hero: {
@@ -200,8 +245,9 @@ export const TRANSLATIONS = {
       hero: {
         tag: 'Build Your Future With ABUAC.',
         title1: 'Careers At',
-        title2: 'Abu Arab',
-        subtitle: 'Join a team delivering high-impact MEP projects across Qatar. Explore opportunities in engineering, project delivery, and field operations. Send your CV to hr@abuac.com'
+        title2: 'Abu Arab Contracting',
+        subtitle: 'Join a team delivering high-impact MEP projects across Qatar. Explore opportunities in engineering, project delivery, and field operations. Send your CV to ',
+        email: 'recruitment@abuac.com'
       }
     }
   },
@@ -214,6 +260,7 @@ export const TRANSLATIONS = {
       contact: 'اتصل بنا',
       contactBtn: 'اتصل بنا',
       companySub: 'أعمال الميكانيكا والكهرباء',
+      careers: 'وظائف',
       companyProfile: 'ملف الشركة'
     },
     hero: {
@@ -284,8 +331,8 @@ export const TRANSLATIONS = {
           date: "فبراير 2025"
         },
         {
-          title: "قصر أم صلال",
-          category: "سكني فاخر",
+          title: "جري السمر - مستودعات",
+          category: "صناعي",
           location: "أم صلال",
           description: "تركيب كهروميكانيكي متميز لقصر فاخر بما في ذلك أتمتة المنزل الذكي والتكييف المتقدم وأنظمة الأمان.",
           date: "أكتوبر 2024"
@@ -364,8 +411,9 @@ export const TRANSLATIONS = {
       hero: {
         tag: 'ابنِ مستقبلك المهني مع أبو عرب.',
         title1: 'وظائف في',
-        title2: 'أبو عرب',
-        subtitle: 'انضم إلى فريق يقدّم مشاريع ميكانيكية وكهربائية وصحية عالية التأثير في قطر. اكتشف الفرص المتاحة في الهندسة، تنفيذ المشاريع، والعمليات الميدانية.'
+        title2: 'أبو عرب للمقاولات',
+        subtitle: 'انضم إلى فريق يقدّم مشاريع ميكانيكية وكهربائية وصحية عالية التأثير في قطر. إكتشف الفرص المتاحة في الهندسة، تنفيذ المشاريع، والعمليات الميدانية. أرسل سيراتك الذاتية إلى  ',
+        email: 'recruitment@abuac.com'
       }
     }
   }

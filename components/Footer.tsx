@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
               <a href="#" className="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center hover:bg-cyan-600 transition-colors"><Instagram size={18} /></a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-bold mb-6 uppercase tracking-wider text-cyan-500">{t('footer.links')}</h4>
             <ul className="space-y-4 text-sm">
@@ -32,10 +32,11 @@ const Footer: React.FC = () => {
               <li><a href="#about" className="text-slate-400 hover:text-white transition-colors">{t('nav.about')}</a></li>
               <li><a href="#services" className="text-slate-400 hover:text-white transition-colors">{t('nav.services')}</a></li>
               <li><a href="#projects" className="text-slate-400 hover:text-white transition-colors">{t('nav.projects')}</a></li>
+              <li><a href="/careers" className="text-slate-400 hover:text-white transition-colors">{t('nav.careers')}</a></li>
               <li><a href="#contact" className="text-slate-400 hover:text-white transition-colors">{t('nav.contact')}</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-bold mb-6 uppercase tracking-wider text-cyan-500">{t('footer.services')}</h4>
             <ul className="space-y-4 text-sm">
@@ -44,14 +45,14 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-bold mb-6 uppercase tracking-wider text-cyan-500">{t('footer.newsletter')}</h4>
             <p className="text-slate-400 mb-6 text-sm">{t('footer.newsletterDesc')}</p>
             <form className="flex">
-              <input 
-                type="email" 
-                placeholder={t('contact.placeholders.email')} 
+              <input
+                type="email"
+                placeholder={t('contact.placeholders.email')}
                 className="bg-white/5 border border-white/10 rounded-s-sm px-4 py-3 outline-none focus:border-cyan-500 transition-all w-full text-sm"
               />
               <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-3 rounded-e-sm font-bold transition-colors">
@@ -60,7 +61,7 @@ const Footer: React.FC = () => {
             </form>
           </div>
         </div>
-        
+
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs">
           <p>© {new Date().getFullYear()} Abu Arab Contracting W.L.L. {t('footer.rights')}</p>
           {/* <div className="flex space-x-6 rtl:space-x-reverse mt-4 md:mt-0">
