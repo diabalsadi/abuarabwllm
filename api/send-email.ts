@@ -7,8 +7,6 @@ export default async function handler(
     request: VercelRequest,
     response: VercelResponse,
 ) {
-    console.log(process.env.EMAIL_USER, 'EMAIL_USER');
-    console.log(process.env.EMAIL_PASS, 'EMAIL_PASS');
     if (request.method !== 'POST') {
         return response.status(405).json({ error: 'Method not allowed' });
     }
@@ -26,8 +24,8 @@ export default async function handler(
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-            user: process.env.EMAIL_USER || 'info@abuac.com',
-            pass: process.env.EMAIL_PASS || 'Yob97216@',
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
         },
     });
 
