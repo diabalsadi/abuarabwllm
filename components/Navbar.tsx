@@ -38,10 +38,16 @@ const Navbar: React.FC = () => {
     { name: t('nav.about'), href: '#about' },
     { name: t('nav.services'), href: '#services' },
     { name: t('nav.projects'), href: '#projects' },
+    { name: t('nav.companyProfile'), href: '/companyProfile.pdf', isExternal: true },
     { name: t('nav.contact'), href: '#contact' },
   ];
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isExternal?: boolean) => {
+    if (isExternal) {
+      setIsOpen(false);
+      return;
+    }
+
     e.preventDefault();
     setIsOpen(false);
 
@@ -66,8 +72,8 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={`fixed w-full z-[100] transition-all duration-300 ${isSolid
-        ? 'bg-white shadow-lg py-3'
-        : 'bg-transparent py-4 md:py-6'
+      ? 'bg-white shadow-lg py-3'
+      : 'bg-transparent py-4 md:py-6'
       }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
@@ -91,7 +97,9 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
+                onClick={(e) => scrollToSection(e, link.href, link.isExternal)}
+                target={link.isExternal ? "_blank" : undefined}
+                rel={link.isExternal ? "noopener noreferrer" : undefined}
                 className={`text-sm font-bold uppercase tracking-widest transition-all hover:text-cyan-500 relative group py-2 ${isSolid ? 'text-slate-700' : 'text-white'
                   }`}
               >
@@ -105,8 +113,8 @@ const Navbar: React.FC = () => {
             <button
               onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
               className={`flex items-center text-xs font-black border-2 rounded-lg px-4 py-1.5 transition-all uppercase tracking-tighter ${isSolid
-                  ? 'border-blue-950/10 text-blue-950 hover:bg-blue-50'
-                  : 'border-white/20 text-white hover:bg-white/10'
+                ? 'border-blue-950/10 text-blue-950 hover:bg-blue-50'
+                : 'border-white/20 text-white hover:bg-white/10'
                 }`}
             >
               <Globe className="w-3.5 h-3.5 me-2" />
@@ -150,8 +158,10 @@ const Navbar: React.FC = () => {
             <a
               key={link.name}
               href={link.href}
+              target={link.isExternal ? "_blank" : undefined}
+              rel={link.isExternal ? "noopener noreferrer" : undefined}
               className="py-4 text-lg font-black text-slate-900 border-b border-gray-100 flex justify-between items-center active:bg-gray-50 transition-colors"
-              onClick={(e) => scrollToSection(e, link.href)}
+              onClick={(e) => scrollToSection(e, link.href, link.isExternal)}
             >
               {link.name}
               <ChevronRight className={`text-cyan-500 ${language === 'ar' ? 'rotate-180' : ''}`} size={20} />

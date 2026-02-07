@@ -95,7 +95,8 @@ export const TRANSLATIONS = {
       projects: 'Projects',
       contact: 'Contact',
       contactBtn: 'CONTACT US',
-      companySub: 'MEP Works'
+      companySub: 'MEP Works',
+      companyProfile: 'Company Profile'
     },
     hero: {
       tag: 'Your Trusted Partner for Integrated MEP Solutions.',
@@ -212,7 +213,8 @@ export const TRANSLATIONS = {
       projects: 'مشاريعنا',
       contact: 'اتصل بنا',
       contactBtn: 'اتصل بنا',
-      companySub: 'أعمال الميكانيكا والكهرباء'
+      companySub: 'أعمال الميكانيكا والكهرباء',
+      companyProfile: 'ملف الشركة'
     },
     hero: {
       tag: 'خياركم الموثوق للحلول الكهروميكانيكية المتكاملة',
