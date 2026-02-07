@@ -18,9 +18,9 @@ export default async function handler(
     // Use environment variables for sensitive info
     // These should be set in Vercel project settings
     const transporter = nodemailer.createTransport({
-        host: 'smtp.office365.com', // Assuming Office365 for abuac.com, user can change if different
-        port: 587,
-        secure: false, // true for 465, false for other ports
+        host: 'smtp.zoho.com',
+        port: 465,
+        secure: true, // true for 465, false for other ports
         auth: {
             user: process.env.EMAIL_USER || 'mabuarab@abuac.com',
             pass: process.env.EMAIL_PASS || 'p34QNvNRX1VB',
