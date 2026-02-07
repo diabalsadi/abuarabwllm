@@ -40,9 +40,10 @@ const Projects: React.FC = () => {
             const location = project.location || PROJECTS[index]?.location;
 
             return (
-              <div
+              <Link
                 key={index}
-                className="group relative overflow-hidden rounded-sm bg-slate-100 h-[22rem] md:h-[30rem] shadow-lg hover:shadow-2xl transition-all duration-700"
+                to="/our-projects"
+                className="group relative overflow-hidden rounded-sm bg-slate-100 h-[22rem] md:h-[30rem] shadow-lg hover:shadow-2xl transition-all duration-700 block"
               >
                 <img
                   src={image}
@@ -67,7 +68,7 @@ const Projects: React.FC = () => {
                     {location}
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
