@@ -1,13 +1,14 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import nodemailer from 'nodemailer';
 
-console.log(process.env.EMAIL_USER, 'EMAIL_USER');
-console.log(process.env.EMAIL_PASS, 'EMAIL_PASS');
+
 
 export default async function handler(
     request: VercelRequest,
     response: VercelResponse,
 ) {
+    console.log(process.env.EMAIL_USER, 'EMAIL_USER');
+    console.log(process.env.EMAIL_PASS, 'EMAIL_PASS');
     if (request.method !== 'POST') {
         return response.status(405).json({ error: 'Method not allowed' });
     }
