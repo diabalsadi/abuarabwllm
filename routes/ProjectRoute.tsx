@@ -6,7 +6,7 @@ import { PROJECTS } from '@/constants';
 import { Project } from '@/types';
 import { Calendar, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 5;
 
 const ProjectRoute = () => {
     const { t } = useLanguage();
